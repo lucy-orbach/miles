@@ -1,0 +1,404 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  font-size: inherit;
+}
+
+button,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  font-family: inherit;
+}
+
+button,
+input[type="submit"] {
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  color: #28353b;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 220px;
+  padding: 15px 40px;
+  margin: 20px auto;
+  background-color: #f4733d;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.button:hover {
+  background-color: #ff5c00;
+  transition: all 0.5s ease-in-out;
+}
+
+.button:disabled {
+  opacity: 0.7;
+}
+.button:disabled:hover {
+  background-color: #f4733d;
+}
+
+.title,
+.subtitle {
+  color: #15a7a4;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+.subtitle {
+  padding-bottom: 7px;
+  border-bottom: 1px solid #1bd4d1;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.slogan {
+  width: 90%;
+  padding-top: 7px;
+  margin: 0px 0px 30px;
+  border-top: 1px solid #1bd4d1;
+  color: #1bd4d1;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.banner {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(40, 53, 59, 0.9);
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(40, 53, 59, 0.9);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.show-dash {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.msg-container {
+  width: 100%;
+}
+
+.errorMessage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 0px;
+  opacity: 0;
+  color: #f4733d;
+  text-align: left;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+.errorIcon {
+  min-height: 40px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.errorIcon::before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 40px;
+  background: transparent url("../img/error.png") left center no-repeat;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inputGroup {
+  position: relative;
+  width: 90%;
+  height: 48px;
+}
+.inputGroup:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 48px;
+  background-repeat: no-repeat;
+  position: left center;
+}
+
+.origin:before {
+  background-image: url(../img/airplaneOff.png);
+}
+
+.destination:before {
+  background-image: url(../img/airplaneLand.png);
+}
+
+.input-text {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding: 3px 3px 1px 55px;
+  border-bottom: 2px dashed #1bd4d1;
+  background-color: transparent;
+  color: #f4733d;
+  font-size: 1rem;
+}
+
+.input-text::-webkit-input-placeholder {
+  color: #15a7a4;
+}
+
+.input-text:focus::-webkit-input-placeholder {
+  transition: all 1s ease-in-out;
+  text-indent: -100%;
+}
+
+.input-text:-moz-placeholder {
+  /* Firefox 18- */
+  color: #15a7a4;
+  opacity: 1;
+}
+
+.input-text:focus:-moz-placeholder {
+  transition: all 1s ease-in-out;
+  text-indent: -100%;
+}
+
+.input-text::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #15a7a4;
+  opacity: 1;
+}
+
+.input-text:focus::-moz-placeholder {
+  transition: all 1s ease-in-out;
+  text-indent: -100%;
+}
+
+.input-text:-ms-input-placeholder {
+  color: #15a7a4;
+}
+
+.input-text:focus:-ms-input-placeholder {
+  transition: all 1s ease-in-out;
+  text-indent: -100%;
+}
+
+.list-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.drop-down {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  max-height: 0px;
+  padding: 0px;
+  z-index: 1000;
+  background-color: #e3e4e5;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.drop-down > div {
+  padding: 10px 10px;
+  border-left: 4px solid #28353b;
+  transition: all 0.3s ease-in-out;
+}
+
+.drop-down-active {
+  max-height: 400px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.drop-down-active > div:hover {
+  border-left-color: #15a7a4;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.miles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f4733d;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 0.5s ease-in-out;
+}
+
+.show-miles {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.map-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .banner {
+    width: 100vw;
+    height: 60vh;
+    margin-top: 40vh;
+  }
+
+  .dashboard {
+    top: 100vh;
+    left: 0px;
+    width: 100vw;
+    height: 60vh;
+    padding: 5px 20px;
+  }
+
+  .show-dash {
+    top: 40vh;
+  }
+
+  .msg-container {
+    height: 50px;
+    margin: 0px;
+  }
+
+  .inputGroup {
+    margin: 0px auto 20px;
+  }
+
+  .miles-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 60px;
+    border-top: 4px solid #f4733d;
+    font-size: 1.5rem;
+  }
+
+  .miles-span {
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .slogan {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .banner {
+    width: 50%;
+    height: 450px;
+  }
+
+  .dashboard {
+    top: 0px;
+    left: -100%;
+    width: 400px;
+    height: 100vh;
+    padding: 20px;
+  }
+  .dashboard .button {
+    margin: 60px auto;
+  }
+
+  .show-dash {
+    left: 0px;
+  }
+
+  .msg-container {
+    height: 75px;
+  }
+
+  .inputGroup {
+    margin: 20px auto;
+  }
+
+  .miles-container {
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #f4733d;
+    font-size: 1.5rem;
+  }
+
+  .miles-span {
+    font-size: 2rem;
+  }
+}

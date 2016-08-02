@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <link href="src/css/main.css" rel="stylesheet" type='text/css'>
+	<title>Mile Tracker: HTML/JS</title>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjk7ivTKYo5eJcYvAqDj8EnGkUZQ9mqP8"
+  defer></script>	
+</head>
+<body>
+	<div class="container">
+		<div id="banner" class="banner">
+			<h1 class="title">Mile Tracker</h1>
+			<h3 class="slogan">Calculate the distance between two airports.</h3>
+			<button id="startBtn" class="button">Start</button>
+		</div>
+		<div id="dashboard" class="dashboard">
+		 	<h2 class="subtitle">Mile Tracker</h2>
+		 	<div class="msg-container">
+		 		<h6 id="error" class="errorMessage"></h6>
+		 	</div>
+		 	<form class="form" id="form">
+			 	<div id="originGroup" class="inputGroup origin">
+			 		<input type="text" name="origin" id="origin" class="input-text" placeholder="Enter airport code" autocomplete="off"/>
+			 		<div id="originList" class="list-container">
+			 		</div>
+			 	</div>
+			 	<div id="destinationGroup" class="inputGroup destination">
+			 		<input type="text" name="destination" id="destination" class="input-text" placeholder="Enter airport code" autocomplete="off"/>
+			 		<div id="destinationList" class="list-container">
+			 		</div>
+			 	</div>
+			 	<input type="submit" id="submitBtn" class="button" value="Calculate Miles" disabled />
+		 	</form>
+		 	<h2 id="milesContainer" class="miles-container"><span id="qty" class="miles-span">0</span> Nautical Miles</h2>
+		</div>
+		<div id="mapCanvas" class="map-container">map goes here</div>
+		</div>
+	</div><!-- container -->
+	 <!-- js -->
+	 <script src="bundle.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjk7ivTKYo5eJcYvAqDj8EnGkUZQ9mqP8&callback=initMap"
+    async defer></script>
+	<script src="src/js/plugins/auto-complete.js"></script>
+  <script src="src/js/common.js"></script>
+	<script src="src/js/airports.js"></script>	
+  <script src="src/js/map.js"></script> 
+  <script src="src/js/input.js"></script>  
+  <script src="src/js/main.js"></script> -->
+</body>
+</html>
+
+

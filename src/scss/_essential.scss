@@ -1,0 +1,42 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+	position: relative;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+	font-size: inherit;
+}
+button,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  font-family: inherit;
+}
+
+
+
+button,
+input[type="submit"] {
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+:focus {
+    outline: 0;
+}

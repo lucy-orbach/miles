@@ -1,0 +1,244 @@
+@import '_vars.scss';
+@import '_essential.scss';
+
+body {
+	color: $gray;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  // overflow: hidden;
+}
+.container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+//buttons
+	.button {
+		width: 220px;
+		padding: 15px 40px;
+		margin: 20px auto;
+		background-color: $orange;
+		font-size: 20px;
+		transition: all 0.5s ease-in-out;
+		&:hover {
+			background-color: $or-dk;
+			transition: all 0.5s ease-in-out;
+		}
+	}
+	.button:disabled {
+		opacity: 0.7;
+		&:hover {
+			background-color: $orange;
+		}
+	}
+// headers & titles
+	.title,
+	.subtitle {
+		color: $teal;
+		margin-bottom: 20px;
+	}
+	.title {
+		font-size: 3rem;
+		letter-spacing: 0.3rem;
+	}
+	.subtitle {
+		padding-bottom: 7px;
+		border-bottom: 1px solid $tiffany;
+		font-size: 2rem;
+		letter-spacing: 0.2rem;
+	}
+	.slogan {
+		width: 90%;
+		padding-top: 7px;
+		margin: 0px 0px 30px;
+		border-top: 1px solid $tiffany;
+		color: $tiffany;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+// INTRO
+.banner {
+	position: relative;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(40, 53, 59, 0.9);
+	transition: all 0.5s ease-in-out;
+	@include shadow();
+}
+
+// DASHBOARD
+.dashboard {
+	position: absolute;
+	z-index: 500;
+	background-color: rgba(40, 53, 59, 0.9);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	@include shadow();
+}
+.show-dash {
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+	.msg-container {
+		width: 100%;
+	}
+		.errorMessage {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: 0px;
+			opacity: 0;
+			color: $orange;
+			text-align: left;
+			text-transform: capitalize;
+			transition: all 0.5s ease-in-out;
+		}
+		.errorIcon {
+			min-height: 40px;
+			opacity: 1;
+			transition: all 0.5s ease-in-out;
+			&::before {
+				content: '';
+				display: block;
+				width: 70px;
+				height: 40px;
+				background: transparent url('../img/error.png') left center no-repeat;
+			}
+		}
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.inputGroup {
+	position: relative;
+	width: 90%;
+	height: 48px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 50px;
+		height: 48px;
+		background-repeat: no-repeat;
+		position: left center;
+	}
+}
+	.origin:before {
+		background-image: url(../img/airplaneOff.png);
+	}
+	.destination:before {
+		background-image: url(../img/airplaneLand.png);
+	}
+.input-text {
+	position: relative;
+	width: 100%;
+	height: 48px;
+	padding: 3px 3px 1px 55px;
+	border-bottom: 2px dashed $tiffany;
+	background-color: transparent;
+	color: $orange;
+	font-size: 1rem;
+}
+	.input-text::-webkit-input-placeholder {
+		color: $teal;
+	}
+		.input-text:focus::-webkit-input-placeholder {
+			transition: all 1s ease-in-out; 
+		  text-indent: -100%;
+		}
+
+	.input-text:-moz-placeholder { /* Firefox 18- */
+		color: $teal;
+		opacity: 1; 
+	}
+		.input-text:focus:-moz-placeholder {
+			transition: all 1s ease-in-out; 
+		  text-indent: -100%;
+		}
+
+	.input-text::-moz-placeholder {  /* Firefox 19+ */
+	   color: $teal;
+	   opacity: 1;  
+	}
+		.input-text:focus::-moz-placeholder {
+			transition: all 1s ease-in-out; 
+		  text-indent: -100%;
+		}
+
+	.input-text:-ms-input-placeholder {
+		color: $teal;
+	}
+		.input-text:focus:-ms-input-placeholder {
+			transition: all 1s ease-in-out; 
+		  text-indent: -100%;
+		}	
+
+.list-container {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+	.drop-down {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		max-height: 0px;
+		padding: 0px;
+		z-index: 1000;
+		background-color: $gray-md;
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+		> div {
+			padding: 10px 10px;
+			border-left: 4px solid $gray;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	.drop-down-active {
+		max-height: 400px;
+		opacity: 1;
+		transition: all 0.5s ease-in-out;
+		> div:hover {
+			border-left-color: $teal;
+			background-color: rgba(0,0,0,0.5);
+			transition: all 0.3s ease-in-out;
+		}
+	}
+.miles-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+	background-color: rgba(0,0,0, 0.3);
+	color: $orange;
+	opacity: 0;
+	transform: scale(0, 0);
+	transition: all 0.5s ease-in-out;
+}
+	.show-miles {
+		opacity: 1;
+		transform: scale(1, 1);
+		transition: all 0.5s ease-in-out;
+	}
+// MAP
+.map-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+}
+@import '_mobile.scss';
+@import '_desktop.scss';

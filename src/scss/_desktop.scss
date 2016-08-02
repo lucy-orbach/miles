@@ -1,0 +1,44 @@
+
+@media (min-width: 768px) {
+	.slogan {
+		font-size: 1.5rem;
+		letter-spacing: 0.1rem;
+	}
+	.banner {
+		width: 50%;
+		height: 450px;
+	}
+	.dashboard {
+		top: 0px;
+		left: -100%;
+		width: 400px;
+		height: 100vh;
+		padding: 20px;
+		.button {
+			margin: 60px auto;
+		}
+	}
+	.show-dash {
+		left: 0px;
+	}
+	.msg-container {
+		height: 75px;
+	}
+	.inputGroup {
+		margin: 20px auto;
+	}
+	.miles-container {
+		flex-direction: column;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 4px solid $orange;
+		font-size: 1.5rem;
+}
+	.show-miles {
+		
+	}
+	.miles-span {
+		font-size: 2rem;
+	}
+}

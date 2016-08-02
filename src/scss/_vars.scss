@@ -1,0 +1,14 @@
+$orange: #f4733d;
+$or-dk: #ff5c00;
+$or-lt: lighten($orange, 5%);
+$teal: #15a7a4; // #2CC0B3;
+$tiffany: #1bd4d1;
+$gray: #28353b; // #38595E
+$gray-lt: #F6F7F8;
+$gray-md: #E3E4E5;
+
+@mixin shadow( $hv:2px, $vv:1px) {
+	-webkit-box-shadow: $hv $hv $hv $vv  rgba(0,0,0, 0.3);
+	-moz-box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
+	box-shadow: $hv $hv $hv $vv rgba(0,0,0, 0.3);
+}
